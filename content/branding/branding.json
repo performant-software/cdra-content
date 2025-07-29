@@ -1,7 +1,7 @@
 {
   "title": "Cabildo de Regla Archive",
   "header": {
-    "hide_title": true
+    "hide_title": false
   },
   "footer": {
     "allow_login": false
