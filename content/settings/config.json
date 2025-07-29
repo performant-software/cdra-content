@@ -82,12 +82,12 @@
       }
     },
     {
-      "name": "events",
+      "name": "Events",
       "route": "/events",
       "geosearch": true,
       "map": {
         "geometry": "1538d574-7d78-4fcc-959e-ca9f9c86e14f.geometry",
-        "max_zoom": 8,
+        "max_zoom": 14,
         "zoom_to_place": true
       },
       "result_card": {
