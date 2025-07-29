@@ -1,4 +1,8 @@
 {
+  "detail_pages": [
+    "places",
+    "events"
+  ],
   "content": {
     "collections": [
       "posts",
@@ -6,10 +10,12 @@
     ],
     "localize_pages": true
   },
-  "detail_pages": [
-    "places",
-    "events"
-  ],
+  "core_data": {
+    "url": "https://app.coredata.cloud",
+    "project_ids": [
+      "85"
+    ]
+  },
   "i18n": {
     "default_locale": "en",
     "locales": [
@@ -33,33 +39,31 @@
     {
       "name": "USGS Topo (MapServer)",
       "layer_type": "raster",
-      "foo": "https://basemap.nationalmap.gov/arcgis/services/USGSTopo/MapServer/WMSServer?bbox=%7Bbbox-epsg-3857%7D&format=image/png&service=WMS&version=1.1.1&request=GetMap&srs=EPSG:3857&transparent=true&width=256&height=256&layers=0&styles=default",
       "url": "https://basemap.nationalmap.gov/arcgis/services/USGSTopo/MapServer/WMSServer?bbox={bbox-epsg-3857}&format=image/png&service=WMS&version=1.1.1&request=GetMap&srs=EPSG:3857&transparent=true&width=256&height=256&layers=0&styles=default"
     },
     {
       "name": "US States",
       "layer_type": "geojson",
       "url": "gz_2010_us_040_00_20m.json",
-      "description": "Data from the United States Census Bureau. https://eric.clst.org/tech/usgeojson/",
       "overlay": true
     }
   ],
   "search": [
     {
+      "name": "Places",
+      "route": "/places",
+      "geosearch": true,
+      "map": {
+        "geometry": "geometry",
+        "max_zoom": 14,
+        "zoom_to_place": true
+      },
       "result_card": {
         "title": "name"
       },
       "timeline": {
         "date_range_facet": "event_range_facet",
         "event_path": "1538d574-7d78-4fcc-959e-ca9f9c86e14f"
-      },
-      "route": "/places",
-      "name": "places",
-      "geosearch": true,
-      "map": {
-        "max_zoom": 8,
-        "zoom_to_place": true,
-        "geometry": "geometry"
       },
       "typesense": {
         "host": "czlf39ts8mj74bq0p-1.a1.typesense.net",
@@ -81,13 +85,13 @@
       "name": "events",
       "route": "/events",
       "geosearch": true,
+      "map": {
+        "geometry": "1538d574-7d78-4fcc-959e-ca9f9c86e14f.geometry",
+        "max_zoom": 8,
+        "zoom_to_place": true
+      },
       "result_card": {
         "title": "name"
-      },
-      "map": {
-        "max_zoom": 8,
-        "zoom_to_place": true,
-        "geometry": "1538d574-7d78-4fcc-959e-ca9f9c86e14f.geometry"
       },
       "timeline": {
         "date_range_facet": "event_range_facet"
@@ -96,9 +100,9 @@
         "host": "czlf39ts8mj74bq0p-1.a1.typesense.net",
         "port": 443,
         "protocol": "https",
-        "query_by": "name",
         "api_key": "ZVn0DyHllZx7ZeELRiW6KCnLxu0hsv6f",
         "index_name": "cdra_events",
+        "query_by": "name",
         "facets": {
           "exclude": [
             "owner_project.name_facet",
@@ -108,11 +112,5 @@
         }
       }
     }
-  ],
-  "core_data": {
-    "url": "https://app.coredata.cloud",
-    "project_ids": [
-      "85"
-    ]
-  }
+  ]
 }
