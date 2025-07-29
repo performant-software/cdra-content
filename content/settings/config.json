@@ -3,7 +3,8 @@
     "collections": [
       "posts",
       "paths"
-    ]
+    ],
+    "localize_pages": true
   },
   "detail_pages": [
     "places",
