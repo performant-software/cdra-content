@@ -57,7 +57,7 @@
       "geosearch": true,
       "map": {
         "max_zoom": 8,
-        "zoom_to_place": false,
+        "zoom_to_place": true,
         "geometry": "geometry"
       },
       "typesense": {
@@ -66,16 +66,26 @@
         "protocol": "https",
         "api_key": "jGCcfd8YLne4KieMOj6KWbr7NDFHNDVQ",
         "index_name": "cdra_places",
-        "query_by": "name"
+        "query_by": "name",
+        "facets": {
+          "exclude": [
+            "owner_project.name_facet",
+            "all_projects.name_facet",
+            "name_facet"
+          ]
+        }
       }
     },
     {
       "name": "events",
       "route": "/events",
       "geosearch": true,
+      "result_card": {
+        "title": "name"
+      },
       "map": {
         "max_zoom": 8,
-        "zoom_to_place": false,
+        "zoom_to_place": true,
         "geometry": "1538d574-7d78-4fcc-959e-ca9f9c86e14f.geometry"
       },
       "timeline": {
@@ -87,7 +97,14 @@
         "protocol": "https",
         "query_by": "name",
         "api_key": "ZVn0DyHllZx7ZeELRiW6KCnLxu0hsv6f",
-        "index_name": "cdra_events"
+        "index_name": "cdra_events",
+        "facets": {
+          "exclude": [
+            "owner_project.name_facet",
+            "all_projects.name_facet",
+            "name_facet"
+          ]
+        }
       }
     }
   ],
