@@ -1,8 +1,9 @@
 {
-  "t_home": "Home",
-  "t_about": "About",
-  "t_paths": "Paths",
-  "t_posts": "Posts",
+  "t_home": "Inicio",
+  "t_about": "Quiénes Somos",
+  "t_pages": "Paginas",
+  "t_paths": "Caminos",
+  "t_posts": "Publicaciones",
   "t_aboutProject": "About the Project",
   "t_startTour": "Start the Tour",
   "t_readMore": "Read More",
