@@ -21,7 +21,7 @@
     "locales": [
       "en",
       "sp",
-      "pt-BR",
+      "pt-br",
       "fr"
     ]
   },
@@ -76,9 +76,7 @@
           "exclude": [
             "owner_project.name_facet",
             "all_projects.name_facet",
-            "names_facet",
-            "1538d574-7d78-4fcc-959e-ca9f9c86e14f.name_facet",
-            "12a3afd2-c822-48c7-a8ce-99e371ddb187.16d8eb46-c15a-4011-8478-68b1b904cece_facet"
+            "name_facet"
           ]
         }
       }
